@@ -1,0 +1,55 @@
+{
+  "name": "@local/dsh-link-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Watches the link:-installed plugins in every DSH profile, reports breakage caused by moving a workspace directory, and can repoint a broken link. Runs a check at boot; adds a composer pill, a CLI and a DSH Go strip + panel.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "bin": {
+    "dsh-link-guard": "./tools/check-plugin-links.mjs"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./scan": "./lib/link-scan.mjs",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "tools",
+    "tests",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "README.en.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh-bundle",
+    "dsh-go",
+    "diagnostics"
+  ],
+  "engines": {
+    "node": ">=20.10",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

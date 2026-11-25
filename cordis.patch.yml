@@ -1,0 +1,8 @@
+- insert:
+    - id: dsh-link-guard
+      name: '@local/dsh-link-guard'
+      config:
+        checkOnBoot: true
+        profiles: all
+        searchBudget: 4000
+        logOnBroken: true

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "插件链接体检",
+    "description": "启动时检查所有 profile 里 link: 安装的插件是否还连得上工作区目录，发现坏链可在面板里一键改路径；附带命令行与手机端状态条。",
+    "detail": "docs/DETAIL.md"
+  }
+}

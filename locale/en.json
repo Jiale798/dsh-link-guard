@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Plugin link guard",
+    "description": "Checks every profile at boot for link:-installed plugins whose workspace directory moved, reports the breakage, and can repoint a link from the panel. Ships a CLI and a DSH Go strip.",
+    "detail": "docs/DETAIL.md"
+  }
+}
